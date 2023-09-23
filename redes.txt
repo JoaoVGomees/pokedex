@@ -1,0 +1,63 @@
+
+Requisição HTTP
+
+URL: https://pokeapi.co/api/v2/pokemon
+    ${IP}/${path = caminho da identificação de recursos}
+
+IP: https://pokeapi.co
+    http://127.0.0.1:3000
+
+PATH: /api/v2/pokemon
+
+REQUEST METHOD: GET | POST | PUT| DELETE | PATCH
+    É o tipo de requisição
+
+Determinação de parâmetro: 
+    
+    Aqui sendo com meior que uma filtragem:
+    https://pokeapi.co/api/v2/pokemon?type=grass&name=i
+
+    Tudo acontece depois do ponto de interrogação(?). E se usa o e comercial(&), para mudar.
+
+    Aqui vai ser como vai aparecer na página, como no exemplo abaixo, irá aparecer os dois primeiros pokemons:
+    https://pokeapi.co/api/v2/pokemon?offset=0&limit=2
+
+    Se for assim, vai mudar de página e mostrar o terceiro e o quarto:
+    https://pokeapi.co/api/v2/pokemon?offset=4&limit=2
+
+
+Headers:
+    Configuração da nossa API.
+        As linguagens q o site aceita.
+        Os tipos de arquivos que o site aceita.
+
+
+BODY: é uma área de dados. Tambem é o corpo da nossa requisição. 
+    O body pode estar dentro da requisição e da resposta
+
+ex do header e do body:
+
+headers: 
+    content-type: application/json
+
+body:
+{
+    "name": "Teste"
+}
+
+
+
+            A RESPOSTA DO SERVIDOR:
+
+
+STATUS CODE
+    É o número que volta como resposta do servidor, e mostra o que aconteceu com a nossa requisição.
+        De 200 ~ 299 quer dizer sucesso
+        De 300 ~ 399 erro de direct
+        De 400 ~ 499 erro por parte do usuário
+        De 500 ~ 599 erro interno do servidor
+
+Response Headers: 
+
+
+Response body: 
