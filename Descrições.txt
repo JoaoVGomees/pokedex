@@ -1,21 +1,23 @@
-<li>
-    Ivysaur
-    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg" alt="Imagem do Ivysaur">
-</li>
-<li>
-    Venosaur
-    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg" alt="Imagem do Venosaur">
-</li>
-<li>
-    Charmander
-    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/4.svg" alt="Imagem do Charmander">
-</li>
-<li>
-    Charmeleon
-    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/5.svg" alt="Imagem do Charmeleon">
-</li>
-<li>
-    Charizard
-    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/6.svg" alt="Imagem do Charizard">
-</li>
+Fazendo a transformação de lista para o HTML com for:
 
+        const listItem = [] // 1º  Criando um array para o browser não ficar renderizando toda hora
+
+            for (let i = 0; i < pokemons.length; i++) {
+                const pokemon = pokemons[i];
+                
+                listItem.push(convertPokemonToLi(pokemon)) // 2º  Adicionando cada Li de cada pokemon ao array
+            }
+
+        console.log(listItem) // 3º  E printando na tela todos os itens da lista, com a sintaxe padrão. 
+
+
+
+Explicando mais a transformação para lista:
+
+- Value = item da lista == pokemons.map(x)/ Index = i / Array = lista completa. 
+
+    Ficaria pokemons.map(value, index, array)
+
+-Essa função vai transformar o pokemon em uma String, q é o nome dele.
+
+- O join vai converter todos os items da lista em uma String só, com o separador q for colocado.
